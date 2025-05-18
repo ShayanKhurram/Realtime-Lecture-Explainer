@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Dark scrollbars — removes white lines */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; /* Fixes that white line at the bottom */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a; /* Fully dark */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+  
+  .flex-1.py-4.px-5.space-y-6.overflow-auto {
+    position: relative;
+    height: 100%;  /* or a specific height */
+    max-height: 100%;
+    overflow: auto;
+  }
+  
+  /* Solution 2: Add these properties to fix the scrollbar */
+  .flex-1.py-4.px-5.space-y-6 {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
